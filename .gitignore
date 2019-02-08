@@ -2,6 +2,8 @@
 *.d
 
 # Object files
+*.ppm
+*.png
 *.o
 *.ko
 *.obj
