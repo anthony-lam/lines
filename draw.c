@@ -7,4 +7,38 @@
 
 //Insert your line algorithm here
 void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
+  //octant 1
+  if (x1-x0>0 && y1-y2>0 && x1-x0>y1-y0){
+    int x = x0;
+    int y = y0;
+    int a = y1-y0;
+    int b = -(x1-x0);
+    int d = 2a+b;
+    while(x<=x1){
+      plot(x,y);
+      if (d>0){
+	y++;
+	d+=2b;
+      }
+      x++;
+      d+=2a;
+    }
+  }
+  //octant 2
+  if (x1-x0>0 && y1-y2>0 && x1-x0<y1-y0){
+    int x = x0;
+    int y = y0;
+    int a = y1-y0;
+    int b = -(x1-x0);
+    int d = a+2b;
+    while(y<=y1){
+      plot(x,y);
+      if (d<0){
+	x++;
+	d+=2a;
+      }
+      y++;
+      d+=2b;
+    }
+  }
 }
