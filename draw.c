@@ -15,7 +15,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     int b = -(x1-x0);
     int d = 2a+b;
     while(x<=x1){
-      plot(x,y);
+      plot(s,c,x,y);
       if (d>0){
 	y++;
 	d+=2b;
@@ -32,7 +32,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     int b = -(x1-x0);
     int d = a+2b;
     while(y<=y1){
-      plot(x,y);
+      plot(s,c,x,y);
       if (d<0){
 	x++;
 	d+=2a;
